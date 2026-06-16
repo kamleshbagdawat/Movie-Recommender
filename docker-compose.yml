@@ -1,0 +1,15 @@
+services:
+
+  movie-app:
+    build: .
+
+    ports:
+      - "5000:5000"
+      - "8000:8000"
+      - "8501:8501"
+
+    volumes:
+      - ./mlruns:/app/mlruns
+
+    env_file:
+      - .env
